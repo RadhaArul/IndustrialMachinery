@@ -1,0 +1,130 @@
+.page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+main {
+    flex: 1;
+}
+.margin{
+    margin-left:20px;
+}
+
+#page-content-wrapper {
+    min-width: 80vw;
+}
+.containersetting {
+    background-color: #97b9b2;
+    width:99vw;
+    height:49vw;
+    color:white;
+}
+
+.nav-link {
+    color: white !important;
+}
+.Dashboard {
+    background-color: #97b9b2;
+    border-radius: 5px;
+}
+    .Dashboard a:hover {
+        color: white;
+        font-weight: 700;
+        box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.5);
+        background-color: #c6e1db;
+        padding: 0.2rem;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-decoration: none;
+    }
+
+
+.navbar {
+    background: linear-gradient(#167863, #305763) !important;
+    height: 4rem;
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    border-block-end: none;
+    border-block-color: none;
+    border-block: none;
+    margin-bottom: 1rem;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.5) !important;
+}
+
+.sidenav {
+    color: white;
+    height: 100%;
+    position: fixed;
+    width: 20%;
+    z-index: 1;
+    top: 3.7rem;
+    left: 0;
+    background-color: #97b9b2;
+    /*background: linear-gradient(#97b9b2, #305763) !important;*/
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    overflow-block: clip;
+    padding-top: 1rem;
+    transition: 0.5s;
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+
+.navbar {
+    padding: 0;
+}
+.title {
+    color: white;
+    padding-left: 25px;
+}
+    
+
+@media (max-width: 640.98px) {
+    .top-row:not(.auth) {
+        display: none;
+    }
+
+    .top-row.auth {
+        justify-content: space-between;
+    }
+
+    .top-row ::deep a, .top-row ::deep .btn-link {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .top-row.auth ::deep a:first-child {
+        flex: 1;
+        text-align: right;
+        width: 0;
+    }
+
+    .top-row, article {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+    
+
+}
