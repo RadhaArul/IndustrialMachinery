@@ -1,0 +1,51 @@
+﻿@page "/machinedetail"
+@page "/machinedetail/{Id}"
+<br /><br /><br />
+<div class="listofdevicescontainer">
+<div class="row justify-content-center m-3">
+    <div class="col-sm-8">
+        <div class="card" style="margin-top:10px">
+            <div class="card-header " style="background-color: #97b9b2">
+                <h1>Machine Name: @Machine.Name </h1>
+            </div>
+
+            <div class="card-body " style=" background-color: #f5bfd7; padding-left:50px">
+
+                <h4>Machine Id : @Machine.Id</h4>
+                <h4>Machine Status : @Machine.Status</h4>
+            </div>
+            <div class="card-footer text-center" style="background-color: #97b9b2">
+                <div class="conatiner" style="overflow-y:scroll ; height:300px">
+                    <h3>History of Temperature</h3>
+                    <table class="table">
+        <thead>
+            <tr>
+                <th>Measured Date</th>
+                <th>Temperature</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if(Temperatures!=null)
+            {
+            @foreach (var temperature in Temperatures)
+            {
+            <tr>
+                <td>@temperature.Date</td>
+                <td>@temperature.Temperature</td>
+
+            </tr>
+            }
+            }
+        </tbody>
+    </table>
+
+
+
+                </div>
+                <a href="/" class="btn btn-primary">Back To List</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>

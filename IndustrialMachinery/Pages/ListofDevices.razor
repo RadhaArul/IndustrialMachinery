@@ -1,6 +1,85 @@
 ﻿@page "/"
 <br /><br /><br />
 <div class="listofdevicescontainer">
+    @if (Message != null)
+{
+    <div class="alert alert-success" id="message">
+        <i class="fas fa-check-circle pe-1"></i>@Message
+    </div>
+}
 <PageTitle>List of Devices</PageTitle>
-<h1>List of Devices</h1>
+<div>
+<h1 style="float:left">List of Devices</h1>
+<a class="btn Dashboard" 
+    style="margin-top: 10px;
+    margin-right: 50px;
+    background: #97b9b2;
+    color: white;
+    float: right;" 
+    href="/createmachine"
+>New Machine</a>
+</div>
+
+@if (Machines == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Machine ID</th>
+                <th>Machine Name</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Temperature</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var machine in Machines)
+            {
+            <tr>
+                <td>@machine.Id</td>
+                <td>@machine.Name</td>
+                <td>@machine.Date <br /><label>Last Updated</label></td>
+                @if(machine.Status)
+                {
+                    <td ><button @onclick="()=>Machinestatus(machine)" id="status-true"> Online </button></td>
+                 }
+                 else
+                 {
+                    <td><button @onclick="()=>Machinestatus(machine)" id="status-false"> Offline </button> </td>
+                 }
+                        <td>@machine.Temperature</td>
+                <td>
+                    <button @onclick="()=>UpdateMachine(machine)" class="btn-info">Update Temperature</button>
+                    <a href="@($"machinedetail/{machine.Id}")" class="btn table-btn" >
+                        
+                      <i class="fas fa-info-circle fa-1x"  aria-hidden="true"></i>
+                    </a>
+                    <a href="@($"machineedit/{machine.Id}")" class="btn table-btn">
+                         <i class="fas fa-edit fa-1x" aria-hidden="true"></i>
+                    </a>
+                    <a href="@($"machinedelete/{machine.Id}")" class="btn table-btn" >
+                        <i class="fas fa-trash fa-1x"style="color:red;" aria-hidden="true"></i>
+                    </a>
+
+               
+
+                </td>
+
+            </tr>
+           @* <tr>
+                <td></td>
+                <td></td>
+                <td><label>Last Updated</label></td>
+            </tr>*@
+            }
+        </tbody>
+    </table>
+}
+
 </div>

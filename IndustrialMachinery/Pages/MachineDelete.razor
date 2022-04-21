@@ -1,0 +1,26 @@
+﻿@page "/machinedelete/{Id}"
+<br /><br /><br />
+<div class="listofdevicescontainer">
+<div class="row justify-content-center m-3">
+    <div class="col-sm-8">
+        <div class="card" style="margin-top:50px">
+            <div class="card-header " style="background-color: #97b9b2">
+                <h1>Machine Name: @Machine.Name </h1>
+            </div>
+
+            <div class="card-body " style=" background-color: #f5bfd7; padding-left:50px">
+
+                <h4>Machine Id : @Machine.Id</h4>
+                <h4>Machine Date : @Machine.Date</h4>
+                <h4>Machine Status : @Machine.Status</h4>
+                <h4>Machine Temperature : @Machine.Temperature</h4>
+            </div>
+            <div class="card-footer text-center" style="background-color: #97b9b2">
+                <a href="/listofdevices" class="btn btn-primary">Cancel</a>
+                <a class="btn btn-danger" @onclick="@DeleteEmployee">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>

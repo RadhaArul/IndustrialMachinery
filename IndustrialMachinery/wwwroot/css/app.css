@@ -13,11 +13,6 @@ a, .btn-link {
     color: #0071c1;
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
-}
 
 .content {
     padding-top: 1.1rem;
@@ -76,12 +71,94 @@ a, .btn-link {
 }
 .listofdevicescontainer {
     background: linear-gradient(#bbabaf, #98616d) !important;
-    height: 78%;
+    height: 80%;
+    width: 80%;
     border-block-end: none;
     border-block-color: none;
     border-block: none;
     margin-bottom: 1rem;
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.5) !important;
-    margin-left: 25%;
-    margin-top:50px;
+    margin-top: 50px;
+    margin-left:250px;
 }
+
+.csetting {
+    color: white;
+    background-color: #97b9b2;
+    width:92vw;
+    height: 100vw;
+}
+
+.Dashboard {
+    background-color: #97b9b2;
+    border-radius: 5px;
+    color: red;
+    margin-left: 30px;
+    height:2rem;
+}
+
+    .Dashboard a:hover {
+        color: white;
+        height: 4rem;
+        box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.5);
+        background-color: #c6e1db;
+        padding: 0.2rem;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-decoration: none;
+    }
+
+
+.newbtn{
+    float:right;
+    margin-top:20px;
+    margin-right:30px;
+}
+.table-btn {
+    color: #167863;
+    background: #c6e1db;
+}
+
+    .table-btn:hover, .table-btn:active {
+        color: #167863;
+        background: #c6e1db;
+        border-color: #c6e1db !important;
+    }
+#status-true {
+    background: #93c3ef;
+    border-radius: 5px;
+    padding:5px;
+    width:60px;
+    height:30px;
+}
+#status-false {
+    background: #ffe599;
+    border-radius: 5px;
+    padding: 5px;
+    width: 60px;
+    height: 30px;
+}
+.totalmachines {
+    background: #c6e1db;
+    width: 50px;
+    height: 30px;
+    color: #167863;
+    font-size:1.5rem;
+    font-weight:700;
+    float:right;
+    margin-right:30px;
+}
+.page-title {
+    color: #23cfa7;
+    font-size: 28px;
+}
+
+.detail-header-footer {
+    background-color: rgb(248, 188, 115);
+}
+#detail-body {
+    background-color: #f5bfd7;
+}
+
+

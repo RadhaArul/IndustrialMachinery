@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "cosmosdb1": {
+      "ignored": "true",
+      "suggestion": "true",
+      "type": "cosmosdb",
+      "connectionId": ""
+    },
+    "storage1": {
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/machinarytable",
+      "type": "storage.azure",
+      "connectionId": "connectionstring"
+    }
+  }
+}

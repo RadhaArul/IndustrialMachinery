@@ -1,31 +1,22 @@
 ﻿@using IndustrialMachinery.Components
+@using IndustrialMachinery.Core
+@using IndustrialMachinery.Services
 @inherits LayoutComponentBase
 
-    <div class="d-flex" id="wrapper">
 
 
-      
-        <div id="page-content-wrapper">
+     
 
-            <nav class="navbar navbar-expand-lg box-shadow">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <img class="img-responsive" id="logo" src="/image/logo.png" />
-                    <h3 class="title">Management Central </h3>
-                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0 margin">
-                        <li class="nav-item Dashboard ">
-                            <a class="nav-link " > Dashboard</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="sidenav">
+            <NavBar> </NavBar>
+             <div class="container" style=" background-color: #97b9b2">
+            <div class="sidenav ">
                 <h1 style="margin-left:15px">Dashboard</h1>
-                <DailyStatistics>  </DailyStatistics>
+                <DailyStatistics >  </DailyStatistics>
             </div>
-            <div class="container-fluid containersetting">
-
+            <div class=" container" >
+                <div class="csetting">
                 @Body
+                </div>
             </div>
-        </div>
+            </div>
 
-    </div>

@@ -1,0 +1,43 @@
+﻿@page "/createmachine"
+<br /><br /><br />
+
+<div class="listofdevicescontainer">
+    <div class="row justify-content-center m-3">
+    <div class="col-sm-8">
+        <div class="card" style="margin-top:50px">
+            <div class="card-header " style="background-color: #97b9b2">
+                @*<h1>Machine Id: @Machine.Id </h1>*@
+            </div>
+        <EditForm Model="@Machine" OnValidSubmit="@HandleValidSubmit" 
+        OnInvalidSubmit="@HandleInvalidSubmit">
+            <DataAnnotationsValidator />
+            <ValidationSummary></ValidationSummary>
+            <div class="card-body " style=" background-color: #f5bfd7; padding-left:50px">
+            <div class="form-group row">
+                <label for="Name" class="col-sm-3">Machine Name: </label>
+                <InputText id="Name" class="form-control col-sm-8" @bind-Value="@Machine.Name" placeholder="Enter the Machine Name"></InputText>
+                <ValidationMessage class="offset-sm-3 col-sm-8" For="@(() => Machine.Name)" />
+            </div>
+
+         
+
+            
+           
+            
+            <div class="form-group row">
+                <label for="Temperature" class="col-sm-3">Temperature: </label>
+                <InputNumber id="Date" class="form-control col-sm-8" @bind-Value="@Machine.Temperature" placeholder="Enter the data"></InputNumber>
+                <ValidationMessage class="offset-sm-3 col-sm-8" For="@(() => Machine.Temperature)" />
+            </div>
+    </div>
+            <div class="card-footer text-center" style="background-color: #97b9b2">
+            <button type="submit" class="btn btn-primary ">Create</button>
+            <a class="btn btn-outline-primary" @onclick="@NavigateToOverview">Back to overview</a>
+           </div>
+        </EditForm>
+            
+</div>
+</div>
+</div>
+</div>
+
